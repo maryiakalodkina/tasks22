@@ -4,8 +4,8 @@
 
 def add_matrix(matrix):
 
-    ''' f - first index of the raw
-        l - last index of the raw
+    ''' f - first index of the row
+        l - last index of the row
         s - first index of the column
         t - last index of the column'''
     
@@ -26,7 +26,7 @@ def add_matrix(matrix):
             sum += matrix[i][f]
         f+=1
 
-        #traversing the last raw
+        #traversing the last row
         for i in range(f, l):
             print(matrix[t-1][i])
             sum += matrix[t-1][i]
@@ -39,7 +39,7 @@ def add_matrix(matrix):
                 sum += matrix[i][(l-1)]
             l-=1
         
-        #traversing the first raw
+        #traversing the first row
         if(s<t):
             for i in range(l-1, (f-1), -1):
                 print(matrix[s][i])
